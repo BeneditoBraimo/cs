@@ -9,3 +9,15 @@ app.config["SQLALCHEMY_DATABASE_URI"] = config.SQLALCHEMY_DATABASE_URI
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = SQLAlchemy(app)
+
+class Incident(db.Model):
+    pass
+
+class Recomendation(db.Model):
+    pass
+
+class Event(db.Model):
+    pass
+
+class Agent(db.Model):
+    pass
