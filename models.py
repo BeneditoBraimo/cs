@@ -18,7 +18,7 @@ class Occurrence(db.Model):
     status = db.Column(db.String(), nullable=False, default="Pending")
     pass
 
-class Recomendation(db.Model):
+class Recommendation(db.Model):
     pass
 
 class Event(db.Model):
