@@ -11,6 +11,11 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
 
 class Occurrence(db.Model):
+    __tablename__ = "occurrences"
+    id = db.Column(db.Integer, primary_key=True)
+    occurrence_type = db.Column(db.String(), nullable=False)
+    description = db.Column(db.String(), nullable=False)
+    status = db.Column(db.String(), nullable=False, default="Pending")
     pass
 
 class Recomendation(db.Model):
