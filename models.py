@@ -22,5 +22,5 @@ class Event(db.Model):
 class Agent(db.Model):
     pass
 
-class Route(db.Model):
+class Location(db.Model):
     pass
