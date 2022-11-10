@@ -10,7 +10,7 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = SQLAlchemy(app)
 
-class Incident(db.Model):
+class Occurrence(db.Model):
     pass
 
 class Recomendation(db.Model):
