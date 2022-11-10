@@ -16,9 +16,13 @@ class Occurrence(db.Model):
     occurrence_type = db.Column(db.String(), nullable=False)
     description = db.Column(db.String(), nullable=False)
     status = db.Column(db.String(), nullable=False, default="Pending")
-    pass
 
 class Recommendation(db.Model):
+    __tablename__ = "recommendations"
+    id = db.Column(db.Integer, primary_key=True)
+    description = db.Column(db.String(), nullable=False)
+    relevance = db.Column(db.String(), nullable=False)
+
     pass
 
 class Event(db.Model):
