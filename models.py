@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from time import datetime
+import time
 import config
 
 app = Flask(__name__)
@@ -55,7 +55,10 @@ class Occurrence(db.Model):
     __tablename__ = "occurrences"
     id = db.Column(db.Integer, primary_key=True)
     occurrence_type = db.Column(db.String(), nullable=False)
-    occurence_date = db.Column(db.DateTime(timezone=True), default=datetime.utcnow)
+    occurence_date = db.Column(
+        db.DateTime(timezone=True),
+        default=str(time.localtime().tm_mday) + str(time.localtime().tm_mon),
+    ) + str(time.localtime().tm_year)
     description = db.Column(db.String(), nullable=False)
     status = db.Column(db.String(), nullable=False, default="Pending")
     agent_id = db.Column(db.Integer, db.ForeignKey(Agent.id))
