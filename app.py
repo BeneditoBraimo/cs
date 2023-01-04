@@ -24,6 +24,9 @@ def show_report_form():
 
 @app.route("/occurrences/report_occurrence", methods=["POST"])
 def report_occurrence():
-    default_value = '0'
-    data = request.form.get("name", default_value)
-    pass
+    occurrence_type = request.form.get("occurrence_type")
+    occurrence_date = request.form.get("occurrence_date")
+    description = request.form.get("description")
+    status = request.form.get("status")
+    
+    return render_template("index.html")
