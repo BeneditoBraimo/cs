@@ -1,7 +1,23 @@
 {%include 'html/header.html'%}
 
 <div class="container pt-3 my-3 border">
-    <form class="need-validation" novalidate action="{{url_for('report_occurrence')}}" method="post">
-        
+    <form class=" form need-validation" novalidate action="{{url_for('report_occurrence')}}" method="post">
+        <div class="form-group">
+            <label for="occurrence_type">Tipo de Ocorr&ecirc;ncia:</label>
+            <input class="form-control" name="occurrence_type" list="occurrences" placeholder="Tipo de ocorr&ecirc;ncia...">
+            <datalist id="occurrences">
+                <option value="Choque entre viaturas">
+                <option value="Despiste e/ou capotamento">
+                <option value="Atropelamento">
+                <option value="Trabalhos de manuten&ccedil;&atilde;o">
+                <option value="Obstru&ccedil;&atilde;o da via de acesso">
+                <option value="Lentid&atilde;o no tr&aacute;fego rodovi&aacute;rio">
+                <option value="Inc&ecirc;ndio">
+            </datalist>
+        </div>
+        <div class="form-group">
+            <label for="occurrence_date">Data de Ocorr&ecirc;ncia:</label>
+            <input type="datetime-local" name="occurrence_date" class="form-control">
+        </div>
     </form>
 </div>
