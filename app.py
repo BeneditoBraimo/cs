@@ -21,3 +21,9 @@ def index():
 def show_report_form():
     title = "Ocurrence form"
     return render_template("occurrence.html", title=title)
+
+@app.route("/occurrences/report_occurrence", methods=["POST"])
+def report_occurrence():
+    default_value = '0'
+    data = request.form.get("name", default_value)
+    pass
