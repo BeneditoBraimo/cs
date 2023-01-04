@@ -13,7 +13,7 @@
     <body>
         <div class="container-fluid pt-2">
             <nav class="navbar navbar-expand-sm border sticky-top pt-3">
-                <a class="navbar-brand" href="#">SafeRoads</a> &nbsp;&nbsp;
+                <a class="navbar-brand" href="{{url_for('index')}}">SafeRoads</a> &nbsp;&nbsp;
                 <form class="form-inline">
                     <input type="text" name="search_key" placeholder="Search... " class="form-control mr-sm-2">
                     <button class="btn btn-success" type="submit">Search</button>
@@ -30,8 +30,8 @@
                       </button>
                       
                       <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Past events</a>
-                        <a class="dropdown-item" href="#">Upcoming Events</a>
+                        <a class="dropdown-item" href="#">Past events <span class="badge bg-info">4</span></a>
+                        <a class="dropdown-item" href="#">Upcoming Events <span class="badge bg-info">0</span></a>
                       </div>
                     </div>
                   </div> &nbsp; &nbsp;&nbsp;
