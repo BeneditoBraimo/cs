@@ -14,4 +14,6 @@ migrate = Migrate(app, db)
 
 @app.route("/index")
 def index():
+    title = "Home"
+    return render_template("index.html", title=title)
     pass
