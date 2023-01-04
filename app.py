@@ -17,6 +17,7 @@ def index():
     title = "Home"
     return render_template("index.html", title=title)
 
-@app.route("/report_occurrence", methods=["GET"])
-def report_occurence(request):
-    pass
+@app.route("/show_report_form")
+def show_report_form():
+    title = "Ocurrence form"
+    return render_template("occurrence.html", title=title)
