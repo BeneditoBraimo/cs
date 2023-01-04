@@ -1,10 +1,12 @@
 {%include 'html/header.html'%}
-
+<div class="container-fluid">
+    <h2 style="text-align: center;"><span class="badge badge-secondary">Formul&aacute;rio de Ocorr&ecirc;ncias</span></h2>
+</div>
 <div class="container pt-3 my-3 border">
     <form class=" form need-validation" novalidate action="{{url_for('report_occurrence')}}" method="post">
         <div class="form-group">
             <label for="occurrence_type">Tipo de Ocorr&ecirc;ncia:</label>
-            <input class="form-control" name="occurrence_type" list="occurrences" placeholder="Tipo de ocorr&ecirc;ncia...">
+            <input class="form-control" name="occurrence_type" list="occurrences" placeholder="Tipo de ocorr&ecirc;ncia..." id="occurrence_type">
             <datalist id="occurrences">
                 <option value="Choque entre viaturas">
                 <option value="Despiste e/ou capotamento">
@@ -17,7 +19,12 @@
         </div>
         <div class="form-group">
             <label for="occurrence_date">Data de Ocorr&ecirc;ncia:</label>
-            <input type="datetime-local" name="occurrence_date" class="form-control">
+            <input type="datetime-local" class="form-control" name="occurrence_date" class="form-control" id="occurrence_date">
+            <label for="description">Descri&ccedil;&atilde;o:</label>
+            <textarea class="form-control" name="description" id="description"></textarea>
+            <label for="location">Localiza&ccedil;&atilde;o:</label>
+            <input class="form-control" name="location" id="location">
         </div>
     </form>
+</div>
 </div>
