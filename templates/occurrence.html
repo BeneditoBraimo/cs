@@ -23,7 +23,12 @@
             <label for="description">Descri&ccedil;&atilde;o:</label>
             <textarea class="form-control" name="description" id="description"></textarea>
             <label for="location">Localiza&ccedil;&atilde;o:</label>
-            <input class="form-control" name="location" id="location">
+            <input class="form-control" list="location" placeholder="Localiza&ccedil;&atilde;o..." id="location">
+            <datalist id="locations">
+                {% for location in locations%}
+                <option value="{{location}}">
+                {% endfor%}
+            </datalist>
         </div>
     </form>
 </div>
