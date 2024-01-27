@@ -31,8 +31,8 @@ def report_occurrence():
     
     return render_template("index.html")
 
-@app.route("/contact_us", method=["POST"])
+@app.route("/contact_us", methods=["POST"])
 def contact():
     title = "Contacte-nos"
-    
+
     return render_template("contact_form.html", title=title)
