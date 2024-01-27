@@ -30,3 +30,9 @@ def report_occurrence():
     status = request.form.get("status")
     
     return render_template("index.html")
+
+@app.route("/contact_us", method=["POST"])
+def contact():
+    title = "Contacte-nos"
+    
+    return render_template("contact_form.html", title=title)
