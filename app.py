@@ -1,5 +1,6 @@
-from flask import request, render_template, redirect, url_for, flash
+from flask import request, render_template, redirect, url_for, session
 from authlib.integrations.flask_client import OAuth
+from dotenv import find_dotenv, load_dotenv
 from flask_migrate import Migrate
 from flask_moment import Moment
 from models import app, db
